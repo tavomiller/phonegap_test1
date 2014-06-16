@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		
+	</head>
+	<body>
+		<div id="props"></div>
+		<input type="button" id="boton1" value="Cargar info" width="200px"/>
+		
+		<script src="js/jquery-2.1.1.js"></script>
+		
+		<script>
+			$("#boton1").click(function () {
+				$.getJSON('http://twitter.com/users/gustavomiller88.json?callback=?', function(json) { 
+				//get information about the user usejquery from twitter api 
+				console.log(json.followers_count);
+				//get the follower_count from the json object and put it in a span 
+				}); 
+			});
+		</script>
+		
+	</body>
+</html>
+
